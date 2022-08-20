@@ -327,11 +327,11 @@ li + .team-card {
   margin-top: 16px;
 }
 
-.svg-item-card {
+.svg-link-card {
+  display: flex;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -340,12 +340,13 @@ li.svg-item-card + .svg-item-card {
   margin-left: 10px;
 }
 
-.svg-item-card:hover,
-.svg-item-card:focus {
+.svg-link-card:hover,
+.svg-link-card:focus {
   background-color: #2196f3;
 }
 
-.svg-item-card:hover .card-link-svg {
+.svg-link-card:hover .card-link-svg,
+.svg-link-card:focus .card-link-svg {
   fill: #ffffff;
 }
 
@@ -362,12 +363,12 @@ li.svg-item-card + .svg-item-card {
   gap: 30px;
 }
 
-.brand-item-svg {
+.brand-svg {
+  display: flex;
   width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -378,14 +379,14 @@ li.svg-item-card + .svg-item-card {
   fill: #afb1b8;
 }
 
-.brand-item-svg:hover,
-.brand-item-svg:focus {
-  border-color: rgba(33, 150, 243, 1);
+.brand-svg:hover,
+.brand-svg:focus {
+  border-color: var(--hover-color);
 }
 
-.brand-link-svg:hover,
-.brand-link-svg:focus {
-  fill: rgba(33, 150, 243, 1);
+.brand-svg:hover .brand-link-svg,
+.brand-svg:focus .brand-link-svg {
+  fill: var(--hover-color);
 }
 
 /* footer */
@@ -478,7 +479,7 @@ li.svg-item-card + .svg-item-card {
   gap: 10px;
 }
 
-.svg-item {
+.svg-link {
   width: 44px;
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -488,17 +489,14 @@ li.svg-item-card + .svg-item-card {
   align-items: center;
 }
 
-.svg-link {
-}
-
 .footer-link-svg {
   width: 20px;
   height: 20px;
   fill: #ffffff;
 }
 
-.svg-item:hover,
-.svg-item:focus {
+.svg-link:hover,
+.svg-link:focus {
   background-color: #2196f3;
 }
 
@@ -537,23 +535,18 @@ li + .filter-iteam {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
 }
-
-.portfolio-item:nth-child(3n) {
-  margin-right: 0;
-}
-
-.portfolio-item {
-  margin-top: 30px;
-  margin-bottom: 0;
-  margin-right: 30px;
-}
-
 .portfolio-item:hover,
 .portfolio-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+/* .portfolio-card:hover,
+.portfolio-card:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+} */
 
 .portfolio-work {
   padding: 20px 24px;
